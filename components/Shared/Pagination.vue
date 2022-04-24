@@ -12,7 +12,11 @@
 <script>
 import _ from 'lodash'
 export default {
-    props:['itemsCount', 'pageSize', 'currentPage'],
+    props:{
+        itemsCount: Number,
+        pageSize: Number,
+        currentPage: Number
+        },
     computed:{
         pages(){
             const pagesCount = Math.ceil(this.itemsCount / this.pageSize)

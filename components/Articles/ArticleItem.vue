@@ -35,7 +35,9 @@
 </template>
 <script>
 export default {
-    props:['article'],
+    props:{
+        article: Object
+    },
     data: () =>({
         imgUrlDefault:'http://erasmusplus.org.ge/files/news/news-1.jpg'
     })
