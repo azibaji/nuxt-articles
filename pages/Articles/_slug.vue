@@ -97,12 +97,15 @@
                 
             </div>
         </div>
+        <comments-skeleton v-else/>
 
     </div> 
 </template>
 <script>
 import {mapGetters} from 'vuex'
+import CommentsSkeleton from '../../components/Skeleton/CommentsSkeleton.vue'
 export default {
+  components: { CommentsSkeleton },
      data(){
         return{
             slug: this.$route.params.slug,
@@ -286,11 +289,10 @@ export default {
                     span{
                         background-color: $background-green;
                         color:white;
-                        padding-right: 0.6em;
-                        padding-left: 0.6em;
+                        padding: 3px 5px;
                         border-radius: 10rem;
                         margin-right:5px;
-                        font-size: $fs-item-title;
+                        font-size: $fs-body;
                         transition: 0.3s;
                         &:hover{
                             -webkit-box-shadow: 1px 1px 7px 2px rgba(208,208,208,0.87); 
